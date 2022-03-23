@@ -25,6 +25,39 @@ Some links.
 
 ### Command history
 
+```sh
+npx create-next-app@latest --typescript --help
+npx create-next-app@latest --typescript # No <project-name> given will be interactive
+
+cd next-example-typescript
+npm run dev
+```
+
+```sh
+npm run build
+npm run start # Server included
+```
+
+![next-network](docs/nextjs-network.png)
+
+### Result
+
+Dev workflow with all defaults.
+
+- Live reload css works. 👍
+- Live reload react component works. 👍
+- No tests at all by default. 👎
+- Importing `.svg` files "just work". 👍
+- `.css` can be imported. 👍
+- `.module.css` works as expected. 👍
+- No builtin storybook support.
+
+Production bundle.
+
+- Static site generation by default 🏎
+  - Rendered html initially ⭐️
+  - File based routing 🤯
+
 ## CRA
 
 - https://create-react-app.dev/
@@ -56,6 +89,8 @@ npm run build
 # Requires `serve` to be installed (`npm install -g serve`)
 serve build
 ```
+
+![cra-network](docs/cra-network.png)
 
 ### Result
 
