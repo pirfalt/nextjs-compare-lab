@@ -58,6 +58,11 @@ Production bundle.
   - Rendered html initially ⭐️
   - File based routing 🤯
 
+Third party library
+
+- Just works
+  (have only tested ReactQuery)
+
 ## CRA
 
 - https://create-react-app.dev/
