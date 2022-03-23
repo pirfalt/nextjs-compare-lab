@@ -40,10 +40,32 @@ export default function Card(props: {
             font-size: 1.25rem;
             line-height: 1.5;
           }
+
+          .title a {
+            color: #0070f3;
+            text-decoration: none;
+          }
+
+          .title a:hover,
+          .title a:focus,
+          .title a:active {
+            text-decoration: underline;
+          }
+
+          .title {
+            margin: 0;
+            line-height: 1.15;
+            font-size: 4rem;
+          }
+
+          .title,
+          .description {
+            text-align: center;
+          }
         `}
       </style>
-      <h2>{props.title} &rarr;</h2>
-      <p>{props.description}</p>
+      <h2 className="title">{props.title} &rarr;</h2>
+      <p className="description">{props.description}</p>
       {props.skipImg ? null : <Image alt="React logo" {...logo} />}
     </a>
   );
