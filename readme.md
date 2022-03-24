@@ -15,54 +15,6 @@ Compare NextJS to Create React App.
 
 Client side rendering (CSR) / Server side rendering (SSR) / Static site generation (SSG).
 
-## NextJS
-
-Some links.
-
-- https://nextjs.org/
-- https://nextjs.org/docs/getting-started
-- https://nextjs.org/learn/foundations/about-nextjs
-
-### Command history
-
-```sh
-npx create-next-app@latest --typescript --help
-npx create-next-app@latest --typescript # No <project-name> given will be interactive
-
-cd next-example-typescript
-npm run dev
-```
-
-```sh
-npm run build
-npm run start # Server included
-```
-
-![next-network](docs/nextjs-network.png)
-
-### Result
-
-Dev workflow with all defaults.
-
-- Live reload css works. 👍
-- Live reload react component works. 👍
-- No tests at all by default. 👎
-- Importing `.svg` files "just work". 👍
-- `.css` can be imported. 👍
-- `.module.css` works as expected. 👍
-- No builtin storybook support.
-
-Production bundle.
-
-- Static site generation by default 🏎
-  - Rendered html initially ⭐️
-  - File based routing 🤯
-
-Third party library
-
-- Just works
-  (have only tested ReactQuery)
-
 ## CRA
 
 - https://create-react-app.dev/
@@ -80,40 +32,96 @@ Third party library
 npx create-react-app --help
 
 # Create new app from typescript template
-npx create-react-app --template typescript cra-example-typescript
+npx create-react-app --template typescript cra-example-typescript # `--template typescript` == `--template cra-template-typescript`
+
+# Start dev
 cd cra-example-typescript
 npm start
 ```
-
-Note: `--template cra-template-typescript` and `--template typescript` results in the same thing.
 
 ```sh
 # Build production bundle
 npm run build
 
-# Requires `serve` to be installed (`npm install -g serve`)
-serve build
+# Any static file server will work
+serve build # Requires `serve` to be installed (`npm install -g serve`)
 ```
 
 ![cra-network](docs/cra-network.png)
 
 ### Result
 
-- Without ejecting the project is fairly clean. 👍
+- Without ejecting the project is fairly clean 👍
 
 Dev workflow with all defaults.
 
-- Live reload css works. 👍
-- Live reload react component works. 👍
-- Tests setup by default. 👍
-- Importing `.svg` files "just work". 👍
-- `.css` can be imported. 👍
-- `.module.css` works as expected. 👍
+- Live reload css works 👍
+- Live reload react component works 👍
+- Tests setup by default 👍
+- Importing `.svg` files "just work" 👍
+- `.css` can be imported 👍
+- `.module.css` works as expected 👍
 - Builtin storybook support?
   https://create-react-app.dev/docs/developing-components-in-isolation
 
 Production bundle.
 
-- Client side rendering 🤷‍♂️
-  - Empty html initially
+- Client side rendering 🤷
+  - Empty html initially.
   - ... routing ...
+
+## NextJS
+
+Some links.
+
+- https://nextjs.org/
+- https://nextjs.org/docs/getting-started
+- https://nextjs.org/learn/foundations/about-nextjs
+
+### Command history
+
+```sh
+# Check the options
+npx create-next-app@latest --help
+
+# Create new app with typescript
+npx create-next-app@latest --typescript # No <project-name> given, will be interactive
+
+# Start dev
+cd next-example-typescript
+npm run dev
+```
+
+```sh
+# Build production bundle
+npm run build
+
+# Server included, can be required
+npm run start
+```
+
+![next-network](docs/nextjs-network.png)
+
+### Result
+
+Dev workflow with all defaults.
+
+- Live reload css works 👍
+- Live reload react component works 👍
+- No tests at all by default 👎
+- Importing `.svg` files "just work" 👍
+- `.css` can be imported 👍
+- `.module.css` works as expected 👍
+- No builtin storybook support 😕
+- File based routing 🤯
+
+Production bundle.
+
+- Static site generation by default 🏎
+  - Rendered html initially ⭐️
+  - File based routing 🤯
+
+Third party library.
+
+- "Just works" 👍
+  (have only tested ReactQuery)
