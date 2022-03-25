@@ -15,7 +15,7 @@ Compare NextJS to Create React App.
 
 Client side rendering (CSR) / Server side rendering (SSR) / Static site generation (SSG).
 
-## CRA
+## Create React App (CRA)
 
 - https://create-react-app.dev/
 - https://create-react-app.dev/docs/getting-started/
