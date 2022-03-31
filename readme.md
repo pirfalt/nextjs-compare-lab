@@ -36,7 +36,7 @@ npx create-react-app --template typescript cra-example-typescript # `--template 
 
 # Start dev
 cd cra-example-typescript
-npm start
+PORT=4000 npm start
 ```
 
 ```sh
@@ -44,7 +44,7 @@ npm start
 npm run build
 
 # Any static file server will work
-serve build # Requires `serve` to be installed (`npm install -g serve`)
+serve build -p 4001 # Requires `serve` to be installed (`npm install -g serve`)
 ```
 
 ![cra-network](docs/cra-network.png)
@@ -97,7 +97,7 @@ npm run dev
 npm run build
 
 # Server included, can be required
-npm run start
+npm run start -- -p 5001
 ```
 
 ![next-network](docs/nextjs-network.png)
